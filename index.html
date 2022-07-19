@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS PERCENTAGE CALCULATOR</title>
+	<link rel="stylesheet" type="text/css" href="style3.css">
+</head>
+<body>
+	<div class="Wrapper">
+		<div class="Container">
+     	 	<h1>Percentage Calculator</h1><br>
+	     <h2><b>Instructions:</b></h2><br>
+	      <p> 1. Enter marks for all the five subjects.</p><br>
+	      <p> 2. Marks out of 100. </p>
+	  <div class="container">
+	  	<h3>Enter Your Marks</h3>
+	  	 <form onsubmit="calculate();  return false;">
+		   <p>
+		   	<input type="number" name="number" placeholder=" Subject 1" id="marks1" min="1" max="100" required/>
+		  </p>
+        <p>
+			<input type="number" name="number" placeholder=" Subject 2" id="marks2" min="1" max="100" required/>
+		</p>
+		   <p>
+		   	<input type="number" name="number" placeholder=" Subject 3" id="marks3" min="1" max="100" required/>
+		 </p>
+		   <p>
+			<input type="number" name="number" placeholder=" Subject 4" id="marks4" min="1" max="100" required/>
+	     </p>
+	        <p>
+			<input type="number" name="number" placeholder=" Subject 5" id="marks5" min="1" max="100" required/>
+		</p>
+			<p><button type="check">Calculate</button></p>
+	  	<h6 id="marks"></h6>
+          <h4 id="grade"></h4>
+	        <h5 id="percentage"></h5>
+	        </form>
+      </div>
+   </div>
+ </div>
+
+
+<script>
+    function calculate() {
+      let marks1=parseInt(document.querySelector("#marks1").value);
+      let marks2=parseInt(document.querySelector("#marks2").value);
+      let marks3=parseInt(document.querySelector("#marks3").value);
+      let marks4=parseInt(document.querySelector("#marks4").value);
+      let marks5=parseInt(document.querySelector("#marks5").value);
+      let numbers=(marks1+marks2+marks3+marks4+marks5);
+      document.querySelector("#marks").innerHTML =`Your Obtained Marks are ${numbers +   "  out of 500.."}`;
+  
+    let result=((marks1+marks2+marks3+marks4+marks5)/500)*100;
+    document.querySelector("#grade").innerHTML =`You got ${result + "%.."}`;
+
+if (result >= 80  && result <= 100 ) {
+        document.querySelector("#percentage")
+        .innerHTML = "Outstanding Performance, You secured 'A1' Grade.. ";
+}    else if (result >= 70  && result <= 80) {
+        document.querySelector("#percentage")
+        .innerHTML = "Excellent Performance, You secured 'A' Grade.. ";
+} else if (result >= 60  && result <= 70) {
+        document.querySelector("#percentage")
+        .innerHTML = "Good Performance, You secured 'B' Grade.. ";
+} else if (result >= 50  && result <= 60) {
+        document.querySelector("#percentage")
+        .innerHTML = "Better Performance, You secured 'C' Grade.. ";
+} else if (result >= 40  && result <= 50) {
+        document.querySelector("#percentage")
+        .innerHTML = "Need to improve in weak areas, You secured 'D' Grade.. ";
+} else if (result >= 30  && result <= 40) {
+        document.querySelector("#percentage")
+        .innerHTML = "Need to improve in weak areas, You secured 'E' Grade.. ";
+} else  {
+        document.querySelector("#percentage")
+        .innerHTML = " You are fail, You secured 'F' Grade.. ";
+}
+}
+
+
+</script>
+
+
+  </body>
+</html>
