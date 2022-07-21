@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JS PERCENTAGE CALCULATOR</title>
-	<link rel="stylesheet" type="text/css" href="style3.css">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>JS PERCENTAGE CALCULATOR</title>
+   <link rel="stylesheet" type="text/css" href="style3.css">
 </head>
 <body>
-	<div class="Wrapper">
-		<div class="Container">
-     	 	<h1>Percentage Calculator</h1><br>
-	     <h2><b>Instructions:</b></h2><br>
-	      <p> 1. Enter marks for all the five subjects.</p><br>
-	      <p> 2. Marks out of 100. </p>
+   <div class="Wrapper">
+     <div class="Container">
+     	<h1>Percentage Calculator</h1><br>
+	  <h2><b>Instructions:</b></h2><br>
+	   <p> 1. Enter marks for all the five subjects.</p><br>
+	   <p> 2. Marks out of 100. </p>
 	  <div class="container">
-	  	<h3>Enter Your Marks</h3>
-	  	 <form onsubmit="calculate();  return false;">
-		   <p>
-		   	<input type="number" name="number" placeholder=" Subject 1" id="marks1" min="1" max="100" required/>
-		  </p>
-        <p>
-			<input type="number" name="number" placeholder=" Subject 2" id="marks2" min="1" max="100" required/>
-		</p>
-		   <p>
-		   	<input type="number" name="number" placeholder=" Subject 3" id="marks3" min="1" max="100" required/>
-		 </p>
-		   <p>
-			<input type="number" name="number" placeholder=" Subject 4" id="marks4" min="1" max="100" required/>
+	    <h3>Enter Your Marks</h3>
+	    <form onsubmit="calculate();  return false;">
+	    <p>
+	     <input type="number" name="number" placeholder=" Subject 1" id="marks1" min="1" max="100" required/>
+	   </p>
+             <p>
+	      <input type="number" name="number" placeholder=" Subject 2" id="marks2" min="1" max="100" required/>
+	     </p>
+	      <p>
+	      <input type="number" name="number" placeholder=" Subject 3" id="marks3" min="1" max="100" required/>
+            </p>
+	      <p>
+	       <input type="number" name="number" placeholder=" Subject 4" id="marks4" min="1" max="100" required/>
 	     </p>
 	        <p>
-			<input type="number" name="number" placeholder=" Subject 5" id="marks5" min="1" max="100" required/>
+	        <input type="number" name="number" placeholder=" Subject 5" id="marks5" min="1" max="100" required/>
 		</p>
-			<p><button type="check">Calculate</button></p>
+		 <p><button type="check">Calculate</button></p>
 	  	<h6 id="marks"></h6>
-          <h4 id="grade"></h4>
+                <h4 id="grade"></h4>
 	        <h5 id="percentage"></h5>
-	        </form>
+	    </form>
       </div>
    </div>
  </div>
